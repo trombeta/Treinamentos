@@ -1,0 +1,7 @@
+C:\Users\rodrigo.trombeta\Google Drive\Trombeta\Documentos\Cursos\Alura\CSharp\csharp-parte-3-herança-e-interface\ByteBank\bin\Debug\ByteBank.exe.config
+C:\Users\rodrigo.trombeta\Google Drive\Trombeta\Documentos\Cursos\Alura\CSharp\csharp-parte-3-herança-e-interface\ByteBank\bin\Debug\ByteBank.exe
+C:\Users\rodrigo.trombeta\Google Drive\Trombeta\Documentos\Cursos\Alura\CSharp\csharp-parte-3-herança-e-interface\ByteBank\bin\Debug\ByteBank.pdb
+C:\Users\rodrigo.trombeta\Google Drive\Trombeta\Documentos\Cursos\Alura\CSharp\csharp-parte-3-herança-e-interface\ByteBank\obj\Debug\ByteBank.csprojAssemblyReference.cache
+C:\Users\rodrigo.trombeta\Google Drive\Trombeta\Documentos\Cursos\Alura\CSharp\csharp-parte-3-herança-e-interface\ByteBank\obj\Debug\ByteBank.csproj.CoreCompileInputs.cache
+C:\Users\rodrigo.trombeta\Google Drive\Trombeta\Documentos\Cursos\Alura\CSharp\csharp-parte-3-herança-e-interface\ByteBank\obj\Debug\ByteBank.exe
+C:\Users\rodrigo.trombeta\Google Drive\Trombeta\Documentos\Cursos\Alura\CSharp\csharp-parte-3-herança-e-interface\ByteBank\obj\Debug\ByteBank.pdb

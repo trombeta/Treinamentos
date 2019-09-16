@@ -1,0 +1,8 @@
+public class ControleBonificacao {
+	
+	private double soma;
+	
+	public void registro(Gerente g) {
+		double boni = g.getBonificacao();
+	}
+}

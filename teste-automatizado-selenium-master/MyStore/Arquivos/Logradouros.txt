@@ -1,0 +1,10 @@
+Alameda
+Avenida
+Núcleo
+Parque
+Rua
+Travessa
+Via
+Viaduto
+Viela
+Vila

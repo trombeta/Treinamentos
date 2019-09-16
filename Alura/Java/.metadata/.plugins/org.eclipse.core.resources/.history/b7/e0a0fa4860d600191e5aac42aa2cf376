@@ -1,0 +1,16 @@
+public class TesteGerente {
+
+	public static void main(String[] args) {
+		
+		Funcionario rodrigo = new Gerente();
+		rodrigo.setNome("Rodrigo Trombeta");
+		rodrigo.setCpf("12345678901");
+		rodrigo.setSalario(5000.00);
+		
+		System.out.println(rodrigo.getNome());
+		System.out.println(rodrigo.getCpf());
+		System.out.println(rodrigo.getSalario());
+		System.out.println(rodrigo.getBonificacao());
+	}
+
+}

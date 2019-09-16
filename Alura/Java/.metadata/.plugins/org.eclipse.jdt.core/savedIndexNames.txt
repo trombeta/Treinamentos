@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\rodrigo.trombeta\Google Drive\Trombeta\Cursos\Alura\Java\.metadata\.plugins\org.eclipse.jdt.core
+680175718.index

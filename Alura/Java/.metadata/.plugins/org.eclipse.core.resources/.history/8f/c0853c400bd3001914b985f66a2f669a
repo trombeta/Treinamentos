@@ -1,0 +1,23 @@
+public class TestaMetodo {
+	public static void main(String[] args) {
+		Conta contaDoPaulo = new Conta();
+		contaDoPaulo.saldo = 100;
+		contaDoPaulo.deposita(50);
+		System.out.println("Saldo atual: " + contaDoPaulo.saldo);
+		
+		boolean conseguiuSacar = contaDoPaulo.saca(20);
+		System.out.println("Conseguiu sacar: " + conseguiuSacar);
+		System.out.println("Saldo atual: " + contaDoPaulo.saldo);
+		
+		Conta contaDaMarcela = new Conta();
+		contaDaMarcela.deposita(1000);
+		if(contaDaMarcela.transfere(300, contaDoPaulo)) {
+			System.out.println("Transferência eftuada com sucesso!");
+		} else {
+			System.out.println("Saldo insuficiente");
+		}
+		System.out.println("Saldo atual da conta da Marcela: " + contaDaMarcela.saldo);
+		System.out.println("Saldo atual da conta do Paulo: " + contaDoPaulo.saldo);
+		
+	}
+}
