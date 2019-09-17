@@ -32,7 +32,7 @@ public class TesteGerente {
 		controle.registro(rodrigotrombeta);
 		controle.registro(rodstrombeta);
 		
-		System.out.println("Total de Bonificações: " + controle.getSoma());
+		System.out.println("Total de BonificaÃ§Ãµes: " + controle.getSoma());
 	}
 
 }

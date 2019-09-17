@@ -1,7 +1,7 @@
 public class EditorVideo extends Funcionario {
 
 	public double getBonificacao() {
-		System.out.println("Chamando o mÈtodo de bonificaÁ„o do EDITOR DE VÕDEO");
+		System.out.println("Chamando o m√©todo de bonifica√ß√£o do EDITOR DE V√çDEO");
 		return super.getBonificacao() + 100;
 	}
 }
