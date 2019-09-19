@@ -1,7 +1,0 @@
-C:\Users\Rodrigo Trombeta\Google Drive\Trombeta\Documentos\Cursos\Alura\CSharp\csharp-parte-6\ByteBank.Modelos\bin\Debug\ByteBank.Modelos.xml
-C:\Users\Rodrigo Trombeta\Google Drive\Trombeta\Documentos\Cursos\Alura\CSharp\csharp-parte-6\ByteBank.Modelos\bin\Debug\ByteBank.Modelos.dll
-C:\Users\Rodrigo Trombeta\Google Drive\Trombeta\Documentos\Cursos\Alura\CSharp\csharp-parte-6\ByteBank.Modelos\bin\Debug\ByteBank.Modelos.pdb
-C:\Users\Rodrigo Trombeta\Google Drive\Trombeta\Documentos\Cursos\Alura\CSharp\csharp-parte-6\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.csproj.CoreCompileInputs.cache
-C:\Users\Rodrigo Trombeta\Google Drive\Trombeta\Documentos\Cursos\Alura\CSharp\csharp-parte-6\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.dll
-C:\Users\Rodrigo Trombeta\Google Drive\Trombeta\Documentos\Cursos\Alura\CSharp\csharp-parte-6\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.pdb
-C:\Users\Rodrigo Trombeta\Google Drive\Trombeta\Documentos\Cursos\Alura\CSharp\csharp-parte-6\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.csprojAssemblyReference.cache
