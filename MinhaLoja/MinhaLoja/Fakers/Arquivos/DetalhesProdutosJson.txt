@@ -1,0 +1,37 @@
+[
+  {
+    "Nome": "Printed Chiffon Dress",
+    "Valor": "$16.40",
+    "UrlDetalhes": "http://automationpractice.com/index.php?id_product=7&controller=product"
+  },
+  {
+    "Nome": "Faded Short Sleeve T-shirts",
+    "Valor": "$16.40",
+    "UrlDetalhes": "http://automationpractice.com/index.php?id_product=1&controller=product"
+  },
+  {
+    "Nome": "Blouse",
+    "Valor": "",
+    "UrlDetalhes": "http://automationpractice.com/index.php?id_product=2&controller=product"
+  },
+  {
+    "Nome": "Printed Summer Dress",
+    "Valor": "$16.51",
+    "UrlDetalhes": "http://automationpractice.com/index.php?id_product=5&controller=product"
+  },
+  {
+    "Nome": "Printed Dress",
+    "Valor": "",
+    "UrlDetalhes": "http://automationpractice.com/index.php?id_product=3&controller=product"
+  },
+  {
+    "Nome": "Printed Summer Dress",
+    "Valor": "$27.00",
+    "UrlDetalhes": "http://automationpractice.com/index.php?id_product=6&controller=product"
+  },
+  {
+    "Nome": "Printed Dress",
+    "Valor": "",
+    "UrlDetalhes": "http://automationpractice.com/index.php?id_product=4&controller=product"
+  }
+]
