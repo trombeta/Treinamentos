@@ -1,4 +1,4 @@
-# veiculo.rb
+require_relative 'veiculo'
 
 class Carro < Veiculo
     def dirigir
