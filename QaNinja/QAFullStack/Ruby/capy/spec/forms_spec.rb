@@ -1,5 +1,5 @@
 def login(usuario, senha)
-    visit '/login'
+    visit "https://training-wheels-protocol.herokuapp.com/login"
 
     fill_in 'userId', with: usuario
     fill_in 'password', with: senha
@@ -7,7 +7,7 @@ def login(usuario, senha)
 
 end
 
-describe 'forms' do
+describe 'forms', :forms do
     it 'login com sucesso' do
         
         login('stark', 'jarvis!')
