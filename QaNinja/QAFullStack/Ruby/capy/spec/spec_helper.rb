@@ -18,10 +18,16 @@ RSpec.configure do |config|
     page.current_window.resize_to(1280, 800)
   end
 
+  config.after(:example) do |e|
+    nome = e.description.gsub(/[^A-Za-z0-9 ]/, '').tr(' ', '_')
+    # condição para obter evidência somente quando o teste falha: if e.exception (após fechar o parentese do screen)
+    page.save_screenshot('log/' + nome + '.png')
+  end
+
 end
 
 Capybara.configure do |config|
-  config.default_driver = :selenium_chrome
+  config.default_driver = :selenium_chrome#_headless
   config.default_max_wait_time = 10
   config.app_host = "https://training-wheels-protocol.herokuapp.com"
 end
