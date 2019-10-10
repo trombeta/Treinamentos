@@ -1,0 +1,14 @@
+Automação com Ruby
+
+Visual Studio Code
+	Extensões: Hyper Term Theme, Material Icon Theme, Cucumber (Gherkin) Full Support, Ruby Language Colorization, rufo (Ruby formatter)
+	
+Obs.: Para o correto funcionamento da extensão "rufo", abra o CMDER para fazer a configuração abaixo e em seguida reinicie o VS Code:
+	gem install rufo
+
+Ruby+DevKit: https://rubyinstaller.org/downloads/
+Instalar padrão e não executar DEVKIT install automaticamente.
+Abrir CMDER (terminal, prompt), verificar se o ruby foi instalado com o comando "ruby --version".
+Executar a instalação do ridk com o comando "ridk install" e selecionar a opção 3 quando solicitado.
+Executar a instalação do bundler com o comando "gem install bundler".
+Verificar se o bundler foi instalado com o comando "bundler --version".
