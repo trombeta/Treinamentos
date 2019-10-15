@@ -1,5 +1,7 @@
 Automação com Ruby
 
+Instalar Ruby
+
 Visual Studio Code
 	Extensões: Hyper Term Theme, Material Icon Theme, Cucumber (Gherkin) Full Support, Ruby Language Colorization, rufo (Ruby formatter)
 	
