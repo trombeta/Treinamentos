@@ -1,19 +1,18 @@
+Dado("que temos os seguintes restaurantes") do |table|
+  @restaurant_data = table.hashes
+end
+
 Quando("acesso a lista de restaurantes") do
   visit '/restaurants'
 end
 
-Então("vejo todas as opções disponíveis") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
+Então("devo ver todos os restaurantes desta lista") do
+  restaurants = all('.restaurant-item')
 
-Então("cada restaurante deve exibir sua categoria") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Então("cada restaurante deve exibir o tempo de entrega") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Então("cada restaurante deve exibir sua nota de avaliação") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @restaurant_data.each_with_index do |value, index|
+    expect(restaurants[index]).to have_text value['nome'].upcase
+    expect(restaurants[index]).to have_text value['categoria']
+    expect(restaurants[index]).to have_text value['entrega']
+    expect(restaurants[index]).to have_text value['avaliacao']
+  end
 end
