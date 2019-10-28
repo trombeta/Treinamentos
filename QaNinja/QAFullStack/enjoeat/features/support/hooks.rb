@@ -3,8 +3,13 @@ Before do
 
     @restaurant_list_page = RestaurantListPage.new
     @restaurant_page = RestaurantPage.new
+    @order_page = OrderPage.new
 end
 
 Before('@bread_bakery') do
     visit "/restaurants/bread-bakery/menu"
+end
+
+Before ('@green-food') do
+    visit "/restaurants/green-food/menu"
 end
