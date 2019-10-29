@@ -10,6 +10,6 @@ Before('@bread_bakery') do
     visit "/restaurants/bread-bakery/menu"
 end
 
-Before ('@green-food') do
+Before ('@green_food') do
     visit "/restaurants/green-food/menu"
 end
