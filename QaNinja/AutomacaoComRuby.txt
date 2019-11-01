@@ -1,16 +1,70 @@
-Automação com Ruby
+Automação com Ruby e Cucumber
 
 Instalar Ruby
+Obs.: No Linux, executar os comandos abaixo para evitar problemas com a instalação do "nokogiri":
+	sudo apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev
+	sudo gem install nokogiri
+	sudo bundler
+Instalar Visual Studio Code
+Baixar o Driver do navegador que será utilizado e colocá-lo no path (ao executar o cucumber, o mesmo irá exibir a url para realizar o download. Obs.: Na url, verificar o arquivo LATEST_VERSION para saber qual a última versão estável do driver)
+	Obs.: no linux, o  driver pode ser movido para o path com o comando "sudo mv DRIVER /usr/local/bin"
 
 Visual Studio Code
 	Extensões: Hyper Term Theme, Material Icon Theme, Cucumber (Gherkin) Full Support, Ruby Language Colorization, rufo (Ruby formatter)
 	
-Obs.: Para o correto funcionamento da extensão "rufo", abra o CMDER para fazer a configuração abaixo e em seguida reinicie o VS Code:
+Obs.: Para o correto funcionamento da extensão "rufo", fazer a configuração abaixo e em seguida reiniciar o VS Code:
 	gem install rufo
 
-Ruby+DevKit: https://rubyinstaller.org/downloads/
-Instalar padrão e não executar DEVKIT install automaticamente.
-Abrir CMDER (terminal, prompt), verificar se o ruby foi instalado com o comando "ruby --version".
-Executar a instalação do ridk com o comando "ridk install" e selecionar a opção 3 quando solicitado.
-Executar a instalação do bundler com o comando "gem install bundler".
+No terminal, executar a instalação do bundler com o comando "gem install bundler".
 Verificar se o bundler foi instalado com o comando "bundler --version".
+
+Abrir Visual Studio Code e criar um novo arquivo chamado "Gemfile" com o seguinte conteúdo
+	source "https://rubygems.org"
+
+	group :test do
+  		gem 'capybara'
+  		gem 'cucumber'
+  		gem 'rspec'
+  		gem 'selenium-webdriver'
+	end
+
+No terminal, acessar a pasta onde foi criado o arquivo "Gemfile" e realizar a instalação das bibliotecas com o comando "bundle install"
+Verificar se o cucumber foi instalado com o comando "cucumber --version"
+	
+
+Ainda no terminal, executar o comando "cucumber --init" para que seja criado a estrutura inicial para se trabalhar com o cucumber, como o exemplo abaixo:
+	features
+	features/step_definitions
+	features/support
+	features/support/env.rb
+
+Configurar o projeto incluindo as seguintes informações no arquivo "env.rb":
+	require "capybara"
+	require "capybara/cucumber"
+	require "selenium-webdriver"
+
+	Capybara.configure do |config|
+	  config.default_driver = :selenium_chrome
+	  config.app_host = "https://www.google.com/"
+	end
+
+Agora, executando o comando "cucumber", o mesmo já deverá ser executado com sucesso, porém, será exibido que não existe nenhum cenário, como o exemplo abaixo:
+	0 scenarios
+	0 steps
+	0m0.000s
+
+Para se iniciar os testes automatizados, começe criando a especificação na pasta "feature" utilizando o padrão "nome_do_cenario.feature.
+O padrão do BDD deve seguir o exemplo abaixo:
+	#language:pt
+
+	Funcionalidade: Funcionalidade 1
+		Escreva aqui a funcionalidade que será utilizada
+
+		Cenário: Cenário 1
+			Dado que eu escreva o cenário 1
+			Quando eu finalizar a escrita do cenário 1
+			Então eu posso iniciar a automação
+
+Para se iniciar a automação, acesse o caminho que se encontra a feature criada e execute o comando "cucumber", assim, o próprio cucumber irá executar a especificação e irá gerar os steps definitions, então, basta copiar os mesmos, criar um arquivo na pasta "step_definitions" que foi criada anteriormente seguindo o padrão "funcionalidade_steps.rb" e colocar o conteúdo copiado.
+
+Pronto, agora já pode iniciar a automação.
