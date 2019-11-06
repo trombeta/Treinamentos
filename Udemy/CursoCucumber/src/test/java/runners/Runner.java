@@ -1,3 +1,4 @@
+package runners;
 import org.junit.runner.RunWith;
 
 import cucumber.api.CucumberOptions;
@@ -6,6 +7,8 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+		features = "src/test/resources/features/aprender_cucumber.feature",
+		glue = "steps",
 		plugin = "pretty",
 		monochrome = true,
 		//snippets: Mantém o padrão Java na nomenclatura das classes. Ex.: queCrieiOArquivoCorretamente
@@ -14,7 +17,7 @@ import cucumber.api.junit.Cucumber;
 		//Geralmente é utilizado quando temos testes muito demorados.
 		//Após a validação, se tudo estiver OK, é necessário alterar para 'false' novamente para executar os testes.
 		dryRun = false,
-		// Quando 'true', quebra o teste quando acrescentado um novo passo na feature.
+		// strict: Quando 'true', quebra o teste quando acrescentado um novo passo na feature.
 		// Quando 'false', o teste fica marcado como skiped
 		strict = false
 		)
