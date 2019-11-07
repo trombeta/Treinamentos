@@ -9,6 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "src/test/resources/features/aprender_cucumber.feature",
 		glue = "steps",
+		tags = {"@tipo1, @tipo2"}, //"~@ignore",
 		plugin = "pretty",
 		monochrome = true,
 		//snippets: Mantém o padrão Java na nomenclatura das classes. Ex.: queCrieiOArquivoCorretamente

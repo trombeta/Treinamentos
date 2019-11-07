@@ -14,12 +14,14 @@ Funcionalidade: Aprender Cucumber
 		Dado que o valor do contador é 15
 		Quando eu incrementar em 3
 		Então o valor do contador será 18
-		
+
+	@tipo1		
 	Cenário: Deve incrementar contador
 		Dado que o valor do contador é 123
 		Quando eu incrementar em 35
 		Então o valor do contador será 158
-		
+	
+	@tipo1 @tipo2	
 	Cenário: Deve calcular atraso na entrega
 		Dado que a entrega é dia 05/04/2018
 		Quando a entrega atrasar em 2 dias
@@ -45,6 +47,7 @@ Funcionalidade: Aprender Cucumber
     E que o nome do passageiro é "Cicrano de Oliveira"
     E que o telefone do passageiro é 9888-8888
 	
+	@ignore
 	Cenário: Deve negar todos os steps "Dado" dos cenários anteriores
     Dado que o ticket é CD123
     E que o ticket é AG1234
