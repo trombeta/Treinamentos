@@ -1,3 +1,9 @@
 Automação com Java e Cucumber
 
 Instalar o Eclipse
+  Plugins no Eclipse
+    Help > Eclipse Marketplace
+      Cucumber
+
+Iniciando Automação
+  New Maven Project
