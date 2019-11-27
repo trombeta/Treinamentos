@@ -1,26 +1,14 @@
 ---
-  - hosts: all
-    handlers:
-      - name: Reiniciar Apache
-        service:
-          name: apache2
-          state: restarted
-        become: yes
+  - hosts: database
     tasks:
       - name: 'Instala pacotes de dependencia do sistema operacional'
         apt:
-          name:
-            - php5
-            - apache2
-            - libapache2-mod-php5
-            - php5-gd
-            - libssh2-php
-            - php5-mcrypt
-            - mysql-server-5.6
-            - python-mysqldb
-            - php5-mysql
+          name: '{{ item }}'
           state: latest
         become: yes
+        with_items:
+          - mysql-server-5.6
+          - python-mysqldb
       
       - name: 'Cria o banco MySql'
         mysql_db:
@@ -35,6 +23,32 @@
           password: 12345
           priv: 'wordpress_db.*:ALL'
           state: present
+          host: "{{ item }}"
+        with_items:
+          - 'localhost'
+          - '127.0.0.1'
+          - '172.17.177.40'
+
+  - hosts: wordpress
+    handlers:
+      - name: Reiniciar Apache
+        service:
+          name: apache2
+          state: restarted
+        become: yes 
+    tasks:
+      - name: 'Instala pacotes de dependencia do sistema operacional'
+        apt:
+          name:
+            - php5
+            - apache2
+            - libapache2-mod-php5
+            - php5-gd
+            - libssh2-php
+            - php5-mcrypt
+            - python-mysqldb
+          state: latest
+        become: yes
 
       - name: 'Baixa o arquivo de instalação do wordpress'
         get_url:
@@ -64,6 +78,7 @@
           - { regex:  'database_name_here', value: 'wordpress_db'}
           - { regex:  'username_here', value: 'wordpress_user'}
           - { regex:  'password_here', value: '12345'}
+          - { regex:  'localhost', value: '172.17.177.42'}
         become: yes
       
       - name: 'Configura o Apache para servir o Wordpress'

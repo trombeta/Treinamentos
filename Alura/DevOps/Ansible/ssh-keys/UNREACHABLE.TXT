@@ -1,0 +1,45 @@
+ocê está recebendo um erro UNREACHABLE parecido com a saída abaixo?
+
+172.17.177.40 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: vagrant@172.17.177.40: Permission denied (publickey,password).\r\n",
+    "unreachable": true
+}
+
+Se sim, há algum problema com a sua configuração ssh do Vagrant. Para resolver esse problema vamos gerar um novo par de chaves ssh e copiar para a VM do Vagrant.
+
+Seguem os passos:
+
+Obs.: Remover o arquivo ~/.ssh/known_hosts.
+
+1) Na pasta do seu projeto (wordpress_com_ansible), crie uma nova pasta ssh-keys para guardar as chaves ssh e entre na pasta:
+
+mkdir ssh-keys
+cd ssh-keys
+
+Depois gere as chaves com o comando:
+ssh-keygen -t rsa
+
+O comando pergunta onde você gostaria de guardar as chaves e qual será o nome da chave. Defina a pasta ssh-keys como destino e como base o nome vagrant_id_rsa, por exemplo:
+
+Enter file in which to save the key (/Users/<usuario>/.ssh/id_rsa):
+/Users/<seu-usuario>/wordpress_com_ansible/ssh-keys/vagrant_id_rsa
+Depois digite uma senha vagrant (ou deixe vazio) e repita a senha.
+
+O comando gera dois arquivos, a chave publica (vagrant_id_rsa.pub) e privada (vagrant_id_rsa)
+
+2) Garanta que o Vagrant subiu a VM (vagrant up).
+
+3) Vamos copiar a chave pública gerada para a VM. Para tal digite na pasta ssh-keys:
+ssh-copy-id -i vagrant_id_rsa.pub vagrant@172.17.177.40
+
+A senha deve ser vagrant. O comando deve mostrar uma saída parecida com a abaixo:
+
+vagrant@172.17.177.40's password:
+
+Number of key(s) added:        1
+
+Now try logging into the machine, with:   "ssh 'vagrant@172.17.177.40'"
+and check to make sure that only the key(s) you wanted were added.
+
+5) Volte para a raiz do seu projeto (na pasta wordpress_com_ansible) e tente executar o comando do Ansible
