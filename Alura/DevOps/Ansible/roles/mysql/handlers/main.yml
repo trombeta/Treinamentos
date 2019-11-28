@@ -1,0 +1,6 @@
+---
+- name: Reiniciar MySql
+  service:
+    name: sql
+    state: restarted
+  become: yes
