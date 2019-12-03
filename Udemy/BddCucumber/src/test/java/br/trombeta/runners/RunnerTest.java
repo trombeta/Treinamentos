@@ -10,12 +10,12 @@ import cucumber.api.junit.Cucumber;
 		features = "src/test/resources/features/alugar_filme.feature",
 		glue = "br.trombeta.steps",
 		tags = "~@ignore",
-		plugin = "pretty",
+		plugin = {"pretty", "html:target/report-html", "json:target/report-json"}, // Tipos de relatórios
 		monochrome = true,
 		snippets = SnippetType.CAMELCASE, //Definie a forma de gerar o nome das classes, no caso, sem underline e com a primera letra sempre maiúsculo
 		dryRun = false, // Caso true, apenas valida se o mapeamento está correto
 		strict = false //Caso true, gera erro no cenário caso algum dos passos esteja indefinido
 		)
-public class Runner {
+public class RunnerTest {
 
 }
