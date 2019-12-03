@@ -17,14 +17,19 @@ Iniciando Automação
         Workspace default > Finish
     Aply and Close
 
-  Adicionar dedendência do Cucumber ao projeto
+  Adicionar dedendências ao projeto
     https://mvnrepository.com/
       Procurar por Cucumber
       Selecionar Cucumber JVM: Java
         Selecionar a última versão e copiar a dependência Maven.
+      Procurar por Selenium
+        Selecionar Selenium Java
     No projeto, selecionar o arquivo pom.xml
       Antes de fechar o project, criar a seção <dependencies> </dependencies> e colar o código do repositório
       Ctrl + Shift + F para organizar a identação
+
+  Baixar o ChromeDriver para o respectivo SO (Windows, Linux, Etc.) e colocar no path
+    No linux, o  driver pode ser movido para o path com o comando "sudo mv DRIVER /usr/local/bin"
 
 Problemas com encoding no Cucumber
 https://www.evernote.com/shard/s3/client/snv?noteGuid=9f1d214f-e602-4825-a9f9-a1eea63f8a32&noteKey=e94d14eff795b81404f76f7499687666&sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs3%2Fsh%2F9f1d214f-e602-4825-a9f9-a1eea63f8a32%2Fe94d14eff795b81404f76f7499687666&title=Problema%2Bcom%2Bencoding%2Bno%2BCucumber
