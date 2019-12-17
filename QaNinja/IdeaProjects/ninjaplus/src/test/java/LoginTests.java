@@ -20,6 +20,53 @@ public class LoginTests {
         $(byText("Entrar")).click();
 
         $(".user .info span").shouldHave(text("Rodrigo"));
+    }
 
+    @Test
+    public void IncorrectPassword(){
+        isChrome();
+        open("http://ninjaplus-web:5000/login");
+
+        $("#emailId").setValue("rodstrombeta@gmail.com");
+        $("#passId").setValue("abc123");
+        $("#login").click();
+
+        $(".alert span").shouldHave(text("Usuário e/ou senha inválidos"));
+    }
+
+    @Test
+    public void UserNotFound(){
+        isChrome();
+        open("http://ninjaplus-web:5000/login");
+
+        $("#emailId").setValue("fulano_de_tal@gmail.com");
+        $("#passId").setValue("pwd123");
+        $("#login").click();
+
+        $(".alert span").shouldHave(text("Usuário e/ou senha inválidos"));
+    }
+
+    @Test
+    public void EmailRequired(){
+        isChrome();
+        open("http://ninjaplus-web:5000/login");
+
+        $("#emailId").setValue("");
+        $("#passId").setValue("pwd123");
+        $("#login").click();
+
+        $(".alert span").shouldHave(text("Opps. Cadê o email?"));
+    }
+
+    @Test
+    public void PasswordRequired(){
+        isChrome();
+        open("http://ninjaplus-web:5000/login");
+
+        $("#emailId").setValue("rodstrombeta@gmail.com");
+        $("#passId").setValue("");
+        $("#login").click();
+
+        $(".alert span").shouldHave(text("Opps. Cadê a senha?"));
     }
 }
