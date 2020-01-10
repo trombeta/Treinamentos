@@ -1,16 +1,13 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
-import org.testng.annotations.*;
-import pages.LoginPage;
-import pages.SideBar;
+import common.BaseTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.text;
 
-public class LoginTests {
-
-    protected static LoginPage login;
-    protected  static SideBar sideBar;
+public class LoginTests extends BaseTest {
 
     @DataProvider(name = "login-alerts")
     public Object[][] loginProvider() {
@@ -20,15 +17,6 @@ public class LoginTests {
                 {"", "pwd123", "Opps. Cadê o email?"},
                 {"rodstrombeta@gmail.com", "", "Opps. Cadê a senha?"},
         };
-    }
-
-    @BeforeMethod
-    public void start() {
-        Configuration.browser = "chrome";
-        Configuration.baseUrl = "http://ninjaplus-web:5000";
-
-        login = new LoginPage();
-        sideBar = new SideBar();
     }
 
     @Test
@@ -42,8 +30,6 @@ public class LoginTests {
 
     @Test(dataProvider = "login-alerts")
     public void shouldSeeLoginAlerts(String email, String pass, String expectAlert) {
-
-
         login
                 .open()
                 .with(email, pass)
