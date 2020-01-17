@@ -1,8 +1,12 @@
 package tests;
 
 import common.BaseTest;
+import models.MovieModel;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.util.Arrays;
+import java.util.List;
 
 import static com.codeborne.selenide.Condition.text;
 
@@ -19,8 +23,17 @@ public class MovieTests extends BaseTest {
 
     @Test
     public void shouldRegisterANewMovie() {
-        String title = "Jumanji - PrÃ³xima fase";
+        MovieModel movieData = new MovieModel(
+                "Jumanji - Próxima fase",
+                "Pré-venda",
+                2020,
+                "16/01/2020",
+                Arrays.asList("The Rock", "Jack Black", "Kevin Hart", "Karen Gillan", "Denny DeVito"),
+                "Tentado a revisitar o mundo de Jumanji, Spencer decide "
+                        + "consertar o bug no jogo do game que permite que sejam transportados ao local",
+                "jumanji2.jpg"
+        );
 
-        movie.add().create(title);
+        movie.add().create(movieData);
     }
 }

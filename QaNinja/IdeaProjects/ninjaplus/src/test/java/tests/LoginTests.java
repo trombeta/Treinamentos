@@ -12,10 +12,10 @@ public class LoginTests extends BaseTest {
     @DataProvider(name = "login-alerts")
     public Object[][] loginProvider() {
         return new Object[][]{
-                {"rodstrombeta@gmail.com", "abc123", "UsuÃ¡rio e/ou senha invÃ¡lidos"},
-                {"fulano_de_tal@gmail.com", "pwd123", "UsuÃ¡rio e/ou senha invÃ¡lidos"},
-                {"", "pwd123", "Opps. CadÃª o email?"},
-                {"rodstrombeta@gmail.com", "", "Opps. CadÃª a senha?"},
+                {"rodstrombeta@gmail.com", "abc123", "Usuário e/ou senha inválidos"},
+                {"fulano_de_tal@gmail.com", "pwd123", "Usuário e/ou senha inválidos"},
+                {"", "pwd123", "Opps. Cadê o email?"},
+                {"rodstrombeta@gmail.com", "", "Opps. Cadê a senha?"},
         };
     }
 
