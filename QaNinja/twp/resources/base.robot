@@ -1,10 +1,6 @@
 ***Settings***
 Library     AppiumLibrary
-
-***Variables***
-${START}       COMEÇAR
-${MENU}        xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
-${NAV_VIEW}    id=io.qaninja.android.twp:id/navView
+Resource    helpers.robot
 
 ***Keywords***
 Open Session
@@ -15,16 +11,7 @@ Open Session
     ...                 deviceName=Emulator
     ...                 app=${EXECDIR}/app/twp.apk
     ...                 udid=emulator-5554
+    Get Started
 
 Close Session
     Close Application
-
-Get Started
-    Wait Until Page Contains        ${START}
-    Click Text                      ${START}
-
-Open Navigator
-    Wait Until Element Is Visible   ${MENU}
-    
-    Click Element                   ${MENU}
-    Wait Until Element Is Visible   ${NAV_VIEW}
