@@ -296,7 +296,17 @@ gradle-app.setting
 !gradle-wrapper.jar
 
 ##############################
-## IntelliJ
+## STS
+##############################
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+##############################
+## IntelliJ IDEA
 ##############################
 out/
 .idea/
